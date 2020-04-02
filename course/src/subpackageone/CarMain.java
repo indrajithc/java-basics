@@ -13,5 +13,10 @@ public class CarMain {
       System.out.println(" Car price " + car1.getPrice());
       System.out.println(" Car2 price " + car0.getPrice());
 
+      System.out.print("\n\n\n===============================\n\n");
+
+      CarTruck carTruck = new CarTruck("BRAT", 2019, 45333, 10, true);
+
+      System.out.println(" Car2 price " + carTruck.getPrice());
   }
 }
