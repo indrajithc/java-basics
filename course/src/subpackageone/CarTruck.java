@@ -8,4 +8,10 @@ public class CarTruck extends Car {
         this.hasTruck = hasTruck;
 
     }
+
+  @Override
+  void display() {
+      super.display();
+    System.out.println("Has Truck : " + this.hasTruck);
+  }
 }

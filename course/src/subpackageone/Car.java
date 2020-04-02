@@ -7,7 +7,7 @@ public class Car {
   double milesDrive;
 
   Car () {
-      
+
   }
 
  Car( String type, int model, double price, double milesDrive) {
@@ -20,6 +20,14 @@ public class Car {
   double getPrice() {
       double newPrice =  price - (milesDrive * 10);
       return newPrice;
+  }
+
+  void display() {
+      System.out.println("Type : " + this.type);
+      System.out.println("Model : " + this.model);
+      System.out.println("Price : " + this.price);
+      System.out.println("miles Drive : " + this.milesDrive);
+      System.out.println("new Price : " + this.getPrice());
   }
 
 
