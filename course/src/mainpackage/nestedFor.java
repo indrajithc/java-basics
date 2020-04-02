@@ -13,7 +13,7 @@ public class nestedFor {
         for( int p=0; p< o; p++) {
             System.out.print("*");
         }
-        System.out.println("");
+        System.out.println("q");
     }
 
     for( int o = 0; o <=  9; o++) {
