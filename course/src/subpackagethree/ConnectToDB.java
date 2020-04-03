@@ -15,5 +15,18 @@ public class ConnectToDB {
             System.out.println("Error : " + e.getMessage());
             System.exit(0);
         }
+
+        String query = "insert into admins"
+        + "(username, password)"
+        + "values('Aby', '12324')"
+        + "";
+
+        try {
+            Statement statement = con.createStatement();
+            statement.executeQuery(query);
+            System.out.println("User added");
+        } catch( Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 } 
