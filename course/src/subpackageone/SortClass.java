@@ -3,7 +3,7 @@ package course.src.subpackageone;
 import java.util.ArrayList;
 import java.util.Collections;
 
-class Person {
+class Person implements Comparable<Person> {
     String name;
     int age;
 
@@ -11,6 +11,12 @@ class Person {
         this.name = name;
         this.age = age;
     }
+
+	@Override
+	public int compareTo(Person arg0) {
+		// TODO Auto-generated method stub
+		return this.age - arg0.age;
+	}
 }
 
 public class SortClass {
@@ -30,18 +36,24 @@ public class SortClass {
         // print(listOfNames);
 
         ArrayList<Person > listOfNames = new ArrayList<>();
-        listOfNames.add( new Person("Aby", 12));
+        listOfNames.add( new Person("Aby", 32));
         listOfNames.add( new Person("Ciby", 22));
         listOfNames.add( new Person("Baby", 33));
-        listOfNames.add( new Person("Aby", 12)); 
+        listOfNames.add( new Person("Liby", 12)); 
 
         System.out.println("Before sort");
         print(listOfNames);
-        // Collections.sort( listOfNames);
-        // System.out.println("After sort");
-        // print(listOfNames);
+        Collections.sort( listOfNames);
+        System.out.println("After sort");
+        print(listOfNames);
 
     }
+
+    // static void print( ArrayList<String> listOfNames) {
+    //     for (String string : listOfNames) {
+    //         System.out.println(string);
+    //     }
+    // }
 
     static void print( ArrayList<Person> listOfNames) {
         for (Person person : listOfNames) {
