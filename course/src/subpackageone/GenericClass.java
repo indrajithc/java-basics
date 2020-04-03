@@ -1,6 +1,6 @@
 package course.src.subpackageone;
 
-public class GenericClass {
+public class GenericClass<M,N> {
 
 
     public static void main(String[] args) {
@@ -8,6 +8,7 @@ public class GenericClass {
         String[] a1 = { "Aby", "Ciby", "Baby"};
         Integer[] a2 = { 1, 2, 3, 45, 6};
         Double[] a3 = { 1.3, 4.3, 5.1 };
+        // M[] a3 = { 1.3, 4.3, 5.1 }; // bc of static 
 
         print( a1);
         print( a2);
