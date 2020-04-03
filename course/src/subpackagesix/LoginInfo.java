@@ -1,6 +1,7 @@
 package course.src.subpackagesix;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class LoginInfo {
 
@@ -21,5 +22,24 @@ public class LoginInfo {
                 "Password  : " + login.password
             );
         }
+
+        System.out.println("\n\nUSer derails by iterator\n");
+        Iterator<Login> iterator = userLogin.iterator();
+        while( iterator.hasNext()) {
+            Login nextElement = iterator.next();
+            System.out.println(
+                "Username : " + nextElement.username +
+                "Password  : " + nextElement.password
+            ); 
+        }
+
+        System.out.println("\n\nUser derails by lamdba \n");
+        userLogin.forEach( loginInfo -> {
+            System.out.println(
+                "Username : " + loginInfo.username +
+                "Password  : " + loginInfo.password
+            ); 
+        });
+
     }
 }
