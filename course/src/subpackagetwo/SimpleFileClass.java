@@ -13,7 +13,7 @@ public class SimpleFileClass {
 
     static void writeToFile( String string ) {
         try {
-            FileWriter fileWriter =  new FileWriter(filePath);
+            FileWriter fileWriter =  new FileWriter(filePath, true);
             fileWriter.write(string);
             fileWriter.close();
         } catch( Exception e) {
