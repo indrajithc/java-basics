@@ -9,6 +9,15 @@ public class MyThreadClass {
         MyThread myThread1 = new MyThread("X");
         MyThread myThread2 = new MyThread("Y");
         myThread.start();
+
+        try {
+			myThread.join();
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+
         myThread1.start();
         myThread2.start();
 
