@@ -2,6 +2,7 @@ package course.src.subpackagesix;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.function.Predicate;
 
 public class LoginInfo {
 
@@ -10,7 +11,7 @@ public class LoginInfo {
         
         ArrayList<Login> userLogin = new ArrayList<Login>();
 
-        userLogin.add(new Login("Aby", "wwer3"));
+        userLogin.add(new Login("Aby", "wwe3"));
         userLogin.add(new Login("Ciby", "34232d"));
         userLogin.add(new Login("Baby", "sdse4w3")); 
 
@@ -32,7 +33,7 @@ public class LoginInfo {
                 "Password  : " + nextElement.password
             ); 
         }
-
+ 
         System.out.println("\n\nUser derails by lamdba \n");
         userLogin.forEach( loginInfo -> {
             System.out.println(
@@ -41,5 +42,16 @@ public class LoginInfo {
             ); 
         });
 
+        Predicate<Login> predicateRules = (p) -> p.isWeak() == true;
+
+        System.out.println("\n\nUser derails by lamdba with week password \n");
+        userLogin.forEach( loginInfo -> {
+
+            if( predicateRules.test( loginInfo))
+            System.out.println(
+                "Username : " + loginInfo.username +
+                "Password  : " + loginInfo.password
+            ); 
+        });
     }
 }

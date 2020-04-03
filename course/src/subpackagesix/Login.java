@@ -8,4 +8,11 @@ public class Login {
         this.username = username;
         this.password = password;
     }
+
+    Boolean isWeak () {
+        if( this.password.length() <= 4) 
+        return true;
+        else
+        return false;
+    }
 }
